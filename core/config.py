@@ -23,29 +23,29 @@ cfg                             = __C
 __C.YOLO                        = edict()
 
 # Set the class name
-__C.YOLO.CLASSES                = "./output_data/data.names"
+__C.YOLO.CLASSES                = "./output_data/train.names"
 __C.YOLO.ANCHORS                = "./data/anchors/basline_anchors.txt"
 __C.YOLO.MOVING_AVE_DECAY       = 0.9995
 __C.YOLO.STRIDES                = [8, 16, 32]
 __C.YOLO.ANCHOR_PER_SCALE       = 3
 __C.YOLO.IOU_LOSS_THRESH        = 0.5
 __C.YOLO.UPSAMPLE_METHOD        = "resize"
-__C.YOLO.ORIGINAL_WEIGHT        = "./checkpoint/yolov3_test_loss=20.5142.ckpt-1.data-00000-of-00001"
-__C.YOLO.DEMO_WEIGHT            = "./checkpoint/yolov3_test_loss=20.5142.ckpt-1.data-00000-of-00001"
+__C.YOLO.ORIGINAL_WEIGHT        =  None # "./checkpoint/yolov3_test_loss=20.5142.ckpt-1.data-00000-of-00001"
+__C.YOLO.DEMO_WEIGHT            =  None #"./checkpoint/yolov3_test_loss=20.5142.ckpt-1.data-00000-of-00001"
 
 # Train options
 __C.TRAIN                       = edict()
 
-__C.TRAIN.ANNOT_PATH            = "./output_data/data2.txt"
+__C.TRAIN.ANNOT_PATH            = "./output_data/train.txt"
 __C.TRAIN.BATCH_SIZE            = 4
-__C.TRAIN.INPUT_SIZE            = [320, 352, 384] #, 416, 448, 480, 512, 544, 576, 608]
+__C.TRAIN.INPUT_SIZE            = [416] # [320, 352, 384, 416, 448, 480, 512, 544, 576, 608]
 __C.TRAIN.DATA_AUG              = False
 __C.TRAIN.LEARN_RATE_INIT       = 1e-4
 __C.TRAIN.LEARN_RATE_END        = 1e-6
 __C.TRAIN.WARMUP_EPOCHS         = 2
 __C.TRAIN.FISRT_STAGE_EPOCHS    = 10
 __C.TRAIN.SECOND_STAGE_EPOCHS   = 10
-__C.TRAIN.INITIAL_WEIGHT        = "./checkpoint/yolov3_test_loss=30.6617.ckpt-2"
+__C.TRAIN.INITIAL_WEIGHT        =  None # "./checkpoint/yolov3_test_loss=5.9323.ckpt-10"
 
 
 
